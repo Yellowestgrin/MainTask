@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<script>
+  function replace(zom) {
+    zom = zom.slice(-8);
+    document.getElementById('zoomed').src = zom;
+  }
+</script>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -8,19 +14,19 @@
 <body>
   <section class="shop_page">
     <div class="gallery">
-      <img class="group1" src="1pic.png"><br>
-      <img class="group1" src="2pic.png"><br>
-      <img class="group1" src="3pic.png"><br>
+      <img class="group1" src="1pic.png" onmouseover="replace(this.src)" ><br>
+      <img class="group1" src="2pic.png" onmouseover="replace(this.src)"><br>
+      <img class="group1" src="3pic.png" onmouseover="replace(this.src)"><br>
     </div>
     <div class="zoom">
-      <img class="zoomed" src="1pic.png"></img>
+      <img class="zoomed" id="zoomed" src="1pic.png"></img>
     </div>
     <div class="info">
+      <h1 class="item_name">Рубашка MEDICINE</h1>
       <div class="top_info">
-        <h1 class="item_name">Рубашка MEDICINE</h1>
         <span class="refs"><a href="">Рубашки Medicine</a></span>
         <span class="refs"><a href="">Все модели Medicine</a></span>
-        <a href="">Рубашки</a>
+        <span class="refs"><a href="">Рубашки</a></span>
       </div>
       <div class="costs_info">
         <p class="costs">
@@ -34,7 +40,23 @@
         <img class="icons" src="correct.png"><span>В наличии в магазине <a href="">Lamoda</a></span><br>
         <img class="icons" src="shipment.png"><span>Бесплатная доставка</span>
       </div>
-
+      <div class="buttons">
+        <button class="buy">Купить</button>
+        <button class="fav">В избранное</button>
+      </div>
+      <div class="desc">
+        <p>
+          Рубашка Medicine выполнена из вискозной ткани с клетчатым узором.<br>
+          Детали: прямой крой; отложной воротник; планка и манжеты на пуговицах; карман на груди.
+        </p>
+      </div>
+      <div class="share">
+        <span class="shareWord">Поделиться: </span>
+        <button class="sharButt"><img style="width:14px;height:15px;"src="vk.png"></button>
+        <button class="sharButt"><img style="width:16px;height:15px;"src="g+.png"></button>
+        <button class="sharButt"><img style="width:12px;height:15px;"src="fb.png"></button>
+        <button class="sharButt"><img style="width:15px;height:15px;"src="tw.png"></button>
+      </div>
     </div>
   </section>
 </body>
